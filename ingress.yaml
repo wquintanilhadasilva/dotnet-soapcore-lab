@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: apicertificado
+spec:
+  rules:
+  - host: "#{IngressName}#.dthk8s.df.xpto.gov.br"
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: apicertificado
+          servicePort: 80

@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:3.1-alpine AS publish
-ARG NEXUS_USER_NAME
-ARG NEXUS_USER_PASSWORD
+#ARG NEXUS_USER_NAME
+#ARG NEXUS_USER_PASSWORD
 
 WORKDIR /src
 COPY . ./

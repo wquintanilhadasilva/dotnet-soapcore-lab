@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apicertificado
+  labels:
+    app: apicertificado
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apicertificado
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: apicertificado
+    spec:
+      containers:
+      - image: registry.xpto.gov.br/app-corp/apicertificado:#{ImageVersion}#
+        imagePullPolicy: Always
+        name: apicertificado
+        env:
+        - name: TZ
+          value: "America/Sao_Paulo"
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        volumeMounts:
+        - name: secrets
+          mountPath: /app/secrets
+          readOnly: true
+        resources:
+          limits:
+            cpu: "50m"
+            memory: 128Mi
+          requests:
+            cpu: "50m"
+            memory: 128Mi
+      volumes:
+        - name: secrets
+          secret:
+            secretName: apicertificado-secret
+      imagePullSecrets:
+      - name: registry-xpto
+status: {}
