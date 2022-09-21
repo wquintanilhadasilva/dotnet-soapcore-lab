@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<acervo>
+  <livros>
+    <livro verificado="n">
+      <titulo>Sidarta</titulo>
+      <autor>Herman Hesse</autor>
+    </livro>
+    <livro verificado="n">
+      <titulo>Crime e Castrigo</titulo>
+      <autor>Fiodor Dostoievski</autor>
+    </livro>
+    <livro verificado="s">
+      <titulo>O grande Gatsby</titulo>
+      <autor>Scott Fitzgerald</autor>
+    </livro>
+    <livro verificado="n">
+      <titulo>1984</titulo>
+      <autor>George Orwell</autor>
+    </livro>
+  </livros>
+  <filmes>
+    <filme verificado="n">
+      <titulo>King Kong</titulo>
+      <ano>1933</ano>
+    </filme>
+    <filme verificado="s">
+      <titulo>2001 - Uma odisseia no espaco</titulo>
+      <ano>1968</ano>
+    </filme>
+    <filme verificado="s">
+      <titulo>Forrest Gump</titulo>
+      <ano>1994</ano>
+    </filme>
+    <filme verificado="n">
+      <titulo>O poderoso chefao</titulo>
+      <ano>1972</ano>
+    </filme>
+  </filmes>
+</acervo>
