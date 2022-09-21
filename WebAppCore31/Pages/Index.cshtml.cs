@@ -20,8 +20,11 @@ namespace WebAppCore31.Pages
 
         public void OnGet()
         {
-            LabService labService = new LabService();
-            labService.Testar();
+            // LabService labService = new LabService();
+            // labService.Testar();
+            PerfomanceTeste perfomanceTeste = new PerfomanceTeste(this._logger);
+            RetornoTeste retorno = perfomanceTeste.executar();
+            ViewData["Dados"] = retorno;
         }
     }
 }
